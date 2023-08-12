@@ -1,0 +1,58 @@
+:root {
+    font-size: $font-size--default;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    @include full-relative;
+    background-color: $color-black--regular;
+}
+
+#__next {
+    @extend body;
+}
+
+#root {
+    @include d-flex(column, unset, unset);
+
+    main {
+        flex: 1 1 auto;
+        height: 200vh;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    @include img-normalize;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+button,
+input,
+textarea {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.container {
+    position: relative;
+    max-width: calc(1776px + 40px);
+    width: 100%;
+    padding-inline: 20px;
+    margin-inline: auto;
+}

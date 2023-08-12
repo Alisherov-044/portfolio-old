@@ -1,0 +1,110 @@
+@mixin d-flex($direction, $align, $justify, $gap: 0, $wrap: nowrap) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+    flex-wrap: $wrap;
+    gap: $gap;
+}
+
+@mixin absolute-center($z-index: 1) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: $z-index;
+}
+
+@mixin absolute-corner($Y: top, $X: left) {
+    @if $Y != ('top' or 'bottom') {
+        @error '#{$Y} position should be `top` or `bottom`';
+    }
+
+    @if $X != ('right' or 'left') {
+        @error '#{$X} position should be `right` or `left`';
+    }
+
+    position: absolute;
+    $Y: 0;
+    $X: 0;
+}
+
+@mixin full-relative {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin circle($width, $height) {
+    @if $width != $height {
+        @error 'in order to create a circle `width` and `height` must be equale!';
+    }
+
+    width: $width;
+    height: $height;
+    border-radius: 50%;
+}
+
+@mixin square($width, $height, $b-radius: 0) {
+    width: $width;
+    height: $height;
+    border-radius: $b-radius;
+}
+
+@mixin font($size, $l-heigth, $wight) {
+    font-size: $size;
+    line-height: $l-heigth;
+    font-weight: $wight;
+}
+
+@mixin img-normalize($positon: absolute, $width: 100%, $height: 100%, $z-index: 1, $obj-fit: cover, $obj-position: center) {
+    position: $positon;
+    width: $width;
+    height: $height;
+    z-index: $z-index;
+    object-fit: $obj-fit;
+    object-position: $obj-position;
+    aspect-ratio: 1 / 1;
+}
+
+@mixin breakpoint--sm($max-width: 480) {
+    @media (max-width: #{$max-width + px}) {
+       @content; 
+    }
+}
+
+@mixin breakpoint--sm-extra($max-width: 600) {
+    @media (max-width: #{$max-width + px}) {
+        @content; 
+    }
+}
+
+@mixin breakpoint--md($max-width: 768) {
+    @media (max-width: #{$max-width + px}) {
+        @content; 
+    }
+}
+
+@mixin breakpoint--lg($max-width: 900) {
+    @media (max-width: #{$max-width + px}) {
+        @content; 
+    }
+}
+
+@mixin breakpoint--x-lg($max-width: 1024) {
+    @media (max-width: #{$max-width + px}) {
+        @content; 
+    }
+}
+
+@mixin breakpoint--x-lg-extra($max-width: 1200) {
+    @media (max-width: #{$max-width + px}) {
+        @content; 
+    }
+}
+
+@mixin media($max-width) {
+    @media (max-width: #{$max-width + px}) {
+        @content;
+    }
+}

@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "link": "#",
+        "icon": "/social/twitter.svg"
+    },
+    {
+        "id": 2,
+        "link": "#",
+        "icon": "/social/dribbble.svg"
+    },
+    {
+        "id": 3,
+        "link": "#",
+        "icon": "/social/linkedin.svg"
+    }
+]

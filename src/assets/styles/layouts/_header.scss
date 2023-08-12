@@ -1,0 +1,103 @@
+.header {
+    position: relative;
+    width: 100%;
+    height: $header-height;
+    z-index: 10;
+
+    @include media(1000) {
+        background-color: $color-black--regular;
+        height: $header-height--mobile;
+    }
+
+    .navbar {
+        @include d-flex(row, center, space-between);
+        @extend .container;
+        height: 100%;
+
+        @include media(1000) {
+            background-color: $color-black--regular;
+        }
+
+        &__links {
+            @include d-flex(row, center, unset);
+            height: 100%;
+
+            @include media(1000) {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                flex-direction: column;
+                width: 100%;
+                height: unset;
+                z-index: -10;
+                transition: all .4s ease;
+
+                &.open {
+                    transform: translateY(100%);
+                }
+            }
+        }
+
+        &__link {
+            @include d-flex(row, center, unset);
+            @include font(16px, 24px, 400);
+            padding-inline: 24px;
+            height: 100%;
+            transition: all .3s ease;
+
+            &:not(:last-of-type) {
+                color: $color-white--dark;
+
+                &:hover {
+                    color: $color-green--light;
+                }
+            }
+
+            &:last-of-type {
+                background-color: $color-blue--light;
+                color: $color-white--regular;
+                font-weight: 600;
+
+                &:hover {
+                    background-color: $color-blue--dark;
+                }
+            }
+
+            @include media(1000) {
+                width: 100%;
+                height: unset;
+                padding-block: 32px;
+
+                &:not(:last-of-type) {
+                    border-bottom: 1px solid $color-border;
+                    background-color: $color-black--light;
+                }
+            }
+        }
+    }
+
+    .logo {
+        position: relative;
+        width: 140px;
+        height: 40px;
+        cursor: pointer;
+
+        img {
+            object-fit: contain;
+        }
+
+        @include media(1000) {
+            width: 120px;
+            height: 30px;
+        }
+    }
+
+    .burger-icon {
+        display: none;
+        cursor: pointer;
+        
+        @include media(1000) {
+            display: inline-block;
+        }
+    }
+}

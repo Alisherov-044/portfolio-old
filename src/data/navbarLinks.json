@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "text": "Experience",
+        "link": "#experience"
+    },
+    {
+        "id": 2,
+        "text": "Work",
+        "link": "#work"
+    },
+    {
+        "id": 3,
+        "text": "Photography",
+        "link": "#photography"
+    },
+    {
+        "id": 4,
+        "text": "Contact",
+        "link": "#contact"
+    }
+]

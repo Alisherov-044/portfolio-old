@@ -1,0 +1,39 @@
+/* Font families */
+
+/* Colors */
+$color-white--regular: #fff;
+$color-white--dark: #ffffffb3;
+$color-black--light: #181823;
+$color-black--regular: #000;
+$color-blue--light: #464dff;
+$color-blue--regular: #5221e6;
+$color-blue--dark: #2A0B85;
+$color-green--light: #04D4D6;
+$color-green--regular: #78a962;
+$color-green--dark: #2e5a1a;
+$color-red: #c94d3f;
+$color-pink: #e95d90;
+$color-grey--light: #ffffff80;
+$color-grey--regular: #8491a0;
+$color-border: #ffffff1f;
+
+/* Shadows */
+$shadow--primary: 0px 5px 15px 0px rgba(0, 0, 0, .14);
+$shadow--secondary: 0px 4px 200px 0px rgba(0, 0, 0, .18);
+$shadow--light: 0px 1px 4px 0px rgba(0, 0, 0, .17);
+
+/* Default sizes */
+$font-weight--light:   300 !default;
+$font-weight--regular: 400 !default;
+$font-weight--bold:    600 !default;
+
+$font-size--default: 16px !default;
+$font-size--sm: 10px !default;
+$font-size--md: 14px !default;
+$font-size--lg: 18px !default;
+$font-size--xl: 22px !default;
+
+$header-height: 88px !default;
+$header-height--mobile: 73px !default;
+$section-margin: 100px !default;
+$section-margin--mobile: 40px !default;
