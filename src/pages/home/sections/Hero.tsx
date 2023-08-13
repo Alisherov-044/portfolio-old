@@ -5,7 +5,7 @@ import { FadeIn } from "@/utils/animations";
 
 export function Hero() {
   return (
-    <Section className="hero__section" full>
+    <Section id="hero" className="hero__section" full>
       <div className="bg-panel" />
       <motion.div
         variants={FadeIn("-100vw")}
@@ -31,7 +31,7 @@ export function Hero() {
           variants={FadeIn("100vw")}
           initial="hidden"
           animate="visible"
-          transition={FadeIn().transition(1.2)}
+          transition={FadeIn().transition(1.7)}
           className="description"
         >
           I'm the small developer with big desire and dream. My wish in the

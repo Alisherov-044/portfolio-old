@@ -39,6 +39,7 @@ interface FooterLinkInterface extends NavbarLinkInterface {}
 interface SectionInterface {
   children: ReactNode;
   className?: string;
+  id?: string;
   full?: boolean;
 }
 
@@ -70,4 +71,27 @@ interface PickInterface {
 
 interface ContainerInterface {
   children: ReactNode;
+}
+
+interface SectionHeaderInterface {
+  slug?: string;
+  title?: string;
+  description?: string;
+  button?: ReactNode;
+}
+
+interface ButtonInterface {
+  text?: string;
+  children?: ReactNode;
+  className?: string;
+  variant?: "primary" | "secondary";
+}
+
+/* Components -> Card */
+
+interface SpecificationInterface {
+  id?: number;
+  index: number;
+  title: string;
+  description: string;
 }

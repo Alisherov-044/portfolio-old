@@ -1,13 +1,37 @@
-import { Container, If, Or, Pick } from "@/components";
-import { SectionInterface } from "@/utils/types";
+import { Container, If, Or, Pick, SectionHeader } from "@/components";
+import { SectionHeaderInterface, SectionInterface } from "@/utils/types";
 
-export function Section({ children, className, full }: SectionInterface) {
+export function Section({
+  children,
+  className,
+  id,
+  slug,
+  title,
+  description,
+  button,
+  full,
+}: SectionInterface & SectionHeaderInterface) {
+  const Header = (
+    <SectionHeader
+      slug={slug}
+      title={title}
+      description={description}
+      button={button}
+    />
+  );
+
   return (
-    <section className={className}>
+    <section id={id} className={className}>
       <Pick state={!!full}>
-        <If condition>{children}</If>
+        <If condition>
+          {Header}
+          {children}
+        </If>
         <Or>
-          <Container>{children}</Container>
+          <Container>
+            {Header}
+            {children}
+          </Container>
         </Or>
       </Pick>
     </section>

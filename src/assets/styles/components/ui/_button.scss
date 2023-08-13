@@ -1,0 +1,45 @@
+.button {
+    position: relative;
+    width: fit-content;
+
+    &.primary {
+        @include font(18px, 20px, 700);
+        text-transform: uppercase;
+        color: $color-white--regular;
+        padding: 24px 32px;
+        border: 1px solid $color-blue--regular;
+        transition: all .3s ease;
+        
+        &:hover {
+            background-color: $color-blue--regular;
+            box-shadow: 0px 35px 35px -21px rgba($color: $color-blue--regular, $alpha: .3);
+            transform: translateY(-5px);
+        }
+    }
+
+    &.secondary {
+        @include font(16px, 40px, 400);
+        color: $color-white--regular;
+        transition: all .2s ease;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: $color-grey--regular;
+            transition: all .2s ease;
+        }
+
+        &:hover {
+            padding-inline: 16px;
+            background-color: $color-blue--regular;
+
+            &::after {
+                background-color: $color-border;
+            }
+        }
+    }
+}

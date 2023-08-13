@@ -21,8 +21,8 @@ export function For({
       createElement(
         type,
         propScheme
-          ? { ...props, [propScheme]: each, key: key || index }
-          : { ...props, ...each, key: key || index }
+          ? { ...props, [propScheme]: each, index, key: key || index }
+          : { ...props, ...each, index, key: key || index }
       )
     );
   }

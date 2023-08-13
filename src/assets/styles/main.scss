@@ -5,6 +5,14 @@
 @import './base/core';
 @import './base/responsive';
 
+/* components -> ui */
+@import './components/ui/sectionHeader';
+@import './components/ui/button';
+@import './components/ui/progressBar';
+
+/* components -> card */
+@import './components/card/specification';
+
 /* layouts */
 @import './layouts/header';
 @import './layouts/footer';

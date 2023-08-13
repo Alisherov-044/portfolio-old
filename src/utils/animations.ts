@@ -1,15 +1,15 @@
-export const FadeIn = (x?: number | string) => {
-  return {
-    hidden: {
-      x,
-    },
-    visible: {
-      x: 0,
-    },
-    transition: (duration: number = 1) => ({
-      type: "tween",
-      ease: "easeOut",
-      duration,
-    }),
-  };
-};
+export const FadeIn = (x?: number | string) => ({
+  hidden: {
+    x,
+    opacity: 0,
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+  },
+  transition: (duration: number = 1.5) => ({
+    type: "spring",
+    bounce: 0,
+    duration,
+  }),
+});

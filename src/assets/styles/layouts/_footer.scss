@@ -2,6 +2,7 @@
     height: 200px;
     background-color: $color-black--light;
     z-index: 10;
+		margin-top: $section-margin;
 
     .container {
         @include d-flex(row, center, space-between);

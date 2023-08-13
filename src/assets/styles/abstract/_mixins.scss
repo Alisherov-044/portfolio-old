@@ -7,6 +7,18 @@
     gap: $gap;
 }
 
+@mixin d-grid($columns, $rows, $gap: 0) {
+    display: grid;
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+    gap: $gap;
+}
+
+@mixin d-grid-self($column, $row) {
+    grid-column: $column;
+    grid-row: $row;
+}
+
 @mixin absolute-center($z-index: 1) {
     position: absolute;
     top: 50%;

@@ -41,6 +41,7 @@
         &__link {
             @include d-flex(row, center, unset);
             @include font(16px, 24px, 400);
+            text-transform: capitalize;
             padding-inline: 24px;
             height: 100%;
             transition: all .3s ease;

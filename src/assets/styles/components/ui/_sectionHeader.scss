@@ -1,0 +1,23 @@
+.section__header {
+	@include d-flex(column, unset, unset);
+	position: relative;
+
+	&--slug {
+		@include font(16px, 24px, 700);
+		text-transform: uppercase;
+		color: $color-grey--regular;
+		margin-bottom: 8px;
+	}
+
+	&--title {
+		@include font(55px, 120%, 700);
+		color: $color-white--regular;
+		margin-bottom: 24px;
+	}
+
+	&--description {
+		@include font(18px, 27px, 400);
+		color: $color-grey--regular;
+		margin-bottom: 40px;
+	}
+}

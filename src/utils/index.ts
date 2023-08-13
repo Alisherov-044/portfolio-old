@@ -1,3 +1,4 @@
 import { doIf } from "./doIf";
+import { colors } from "./colors";
 
-export { doIf };
+export { doIf, colors };

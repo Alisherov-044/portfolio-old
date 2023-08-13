@@ -1,0 +1,33 @@
+.specifications__section {
+	@include d-flex(column, unset, unset, 40px);
+	position: relative;
+	margin-top: $section-margin;
+
+	.section__header {
+		max-width: 780px;
+
+
+		&--title {
+			@include media(750) {
+				font-size: 48px;
+			}	
+
+			@include media(650) {
+				font-size: 38px;
+			}
+		}
+	}
+
+	.specifications__wrapper {
+		@include d-grid(repeat(3, 1fr), unset, 70px);
+
+		@include media(1000) {
+			@include d-grid(unset, repeat(3, 1fr), 70px);
+			max-width: 550px;
+
+			.specification__card {
+				padding-right: 0;
+			}
+		}
+	}
+}

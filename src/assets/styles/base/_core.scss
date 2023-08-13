@@ -12,6 +12,7 @@ html,
 body {
     @include full-relative;
     background-color: $color-black--regular;
+    scroll-behavior: smooth;
 }
 
 #__next {
@@ -23,7 +24,6 @@ body {
 
     main {
         flex: 1 1 auto;
-        height: 200vh;
     }
 }
 
@@ -47,6 +47,10 @@ textarea {
     background: transparent;
     border: none;
     outline: none;
+}
+
+button {
+    cursor: pointer;
 }
 
 .container {
