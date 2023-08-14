@@ -16,7 +16,7 @@ export function Specification({
 
   return (
     <motion.div
-      variants={FadeIn("-100%")}
+      variants={FadeIn("-20%")}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
