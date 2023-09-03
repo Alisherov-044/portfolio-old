@@ -1,0 +1,32 @@
+.skills__section {
+  position: relative;
+  margin-top: $section-margin;
+
+  .container {
+    @include d-flex(row, unset, unset, 24px);
+
+    @include media(986) {
+      flex-direction: column;
+    }
+  }
+
+  .section__header {
+    width: calc(100% / 3);
+  }
+
+  .skills__card--wrapper {
+    @include d-grid(repeat(2, 1fr), unset, 70px);
+    width: calc(100% / 4 * 3);
+
+    @include media(762) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @include media(986) {
+    .section__header,
+    .skills__card--wrapper {
+      width: 100%;
+    }
+  }
+}

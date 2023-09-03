@@ -1,5 +1,9 @@
 import { Hero } from "./sections/Hero";
-import { Specifications } from "./sections/Specifications";
 import { About } from "./sections/About";
+import { Brands } from "./sections/Brands";
+import { Skills } from "./sections/Skills";
+import { Contact } from "./sections/Contact";
+import { Projects } from "./sections/Projects";
+import { Specifications } from "./sections/Specifications";
 
-export { Hero, Specifications, About };
+export { Hero, About, Brands, Skills, Contact, Projects, Specifications };

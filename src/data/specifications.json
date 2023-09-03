@@ -2,16 +2,19 @@
     {
         "id": 1,
         "title": "UI",
-        "description": "I currently am the lead designer on the interaction design team for Google Play."
+        "description": "I currently am the lead designer on the interaction design team for Google Play.",
+        "color": "#3CC74E"
     },
     {
         "id": 2,
         "title": "API",
-        "description": "I currently am the lead designer on the interaction design team for Google Play."
+        "description": "I currently am the lead designer on the interaction design team for Google Play.",
+        "color": "#588FEC"
     },
     {
         "id": 3,
         "title": "Animation",
-        "description": "I currently am the lead designer on the interaction design team for Google Play."
+        "description": "I currently am the lead designer on the interaction design team for Google Play.",
+        "color": "#E95D90"
     }
 ]

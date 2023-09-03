@@ -1,5 +1,6 @@
 .about__section {
     @include d-flex(row, unset, unset);
+    position: relative;
     background-color: $color-white--smoke;
     margin-top: $section-margin;
 
@@ -24,11 +25,29 @@
                 color: $color-white--regular;
             }
         }
+
+        @include media(1250) {
+            padding: 60px 35px;
+        }
+
+        @include media(764) {
+            padding: 40px 25px;
+        }
     }
 
     .about-bg {
         position: relative;
         width: 50%;
-        height: 600px;
+        min-height: 100%;
+    }
+
+    @include media(764) {
+        flex-direction: column;
+
+        .section__header,
+        .about-bg {
+            width: 100%;
+            height: 450px;
+        }
     }
 }

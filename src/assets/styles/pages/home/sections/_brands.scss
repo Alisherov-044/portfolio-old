@@ -1,0 +1,14 @@
+.brands__section {
+  position: relative;
+  margin-top: $section-margin;
+
+  .brands__wrapper {
+    @include d-flex(row, unset, unset);
+    overflow: hidden;
+
+    @include media(990) {
+      width: 100%;
+      flex-wrap: wrap;
+    }
+  }
+}

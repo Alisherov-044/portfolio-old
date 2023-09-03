@@ -12,6 +12,12 @@
 
 /* components -> card */
 @import './components/card/specification';
+@import './components/card/brand';
+@import './components/card/skill';
+@import './components/card/project';
+
+/* components -> form */
+@import './components/form/input';
 
 /* layouts */
 @import './layouts/header';

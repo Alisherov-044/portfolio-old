@@ -1,18 +1,14 @@
-import { colors, doIf } from "@/utils";
+import { doIf } from "@/utils";
+import { motion } from "framer-motion";
 import { FadeIn } from "@/utils/animations";
 import { SpecificationInterface } from "@/utils/types";
-import { motion } from "framer-motion";
 
-export function Specification({
-  index,
-  title,
-  description,
-}: SpecificationInterface) {
-  const style = {
-    color: colors[index],
-  };
+export function Specification({ specification }: SpecificationInterface) {
+  let { index, title, description, color } = specification;
 
   index += 1;
+
+  const style = { color };
 
   return (
     <motion.div

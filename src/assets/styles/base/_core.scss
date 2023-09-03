@@ -59,4 +59,8 @@ button {
     width: 100%;
     padding-inline: 20px;
     margin-inline: auto;
+
+    &.sm {
+        max-width: calc(1076px + 40px);
+    }
 }

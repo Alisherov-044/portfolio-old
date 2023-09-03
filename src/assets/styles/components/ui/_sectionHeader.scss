@@ -13,6 +13,14 @@
 		@include font(55px, 120%, 700);
 		color: $color-white--regular;
 		margin-bottom: 24px;
+
+		@include media(1060) {
+			@include font(45px, 120%, 700);
+		}
+
+		@include media(764) {
+				@include font(38px, 120%, 700);
+		}
 	}
 
 	&--description {

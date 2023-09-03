@@ -1,0 +1,26 @@
+.contact__section {
+  position: relative;
+  margin-top: $section-margin;
+
+  .container {
+    @include d-flex(row, unset, unset, 24px);
+    
+    @include media(1048) {
+      flex-direction: column;
+    }
+  }
+
+  .contact__form {
+    @include d-flex(column, unset, unset, 40px);
+    flex-shrink: 0;
+    width: 50%;
+
+    &--button {
+      width: 100%;
+    }
+
+    @include media(1048) {
+      width: 100%;
+    }
+  }
+}

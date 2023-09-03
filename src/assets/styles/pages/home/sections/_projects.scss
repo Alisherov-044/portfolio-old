@@ -1,0 +1,27 @@
+.projects__section {
+  position: relative;
+  margin-top: $section-margin;
+
+  .container {
+    @include d-flex(column, unset, unset, 24px, wrap);
+    max-height: 900px;
+
+    @include media(990) {
+      max-height: unset;
+      flex-wrap: nowrap;
+    }
+  }
+
+  .section__header {
+    max-width: calc(50% - 24px);
+
+    @include media(990) {
+      max-width: 100%;
+    }
+  }
+
+  &--button__wrapper {
+    @include d-flex(row, center, center);
+    flex-grow: 1;
+  }
+}

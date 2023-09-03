@@ -1,5 +1,5 @@
 import { ContainerInterface } from "@/utils/types";
 
-export function Container({ children }: ContainerInterface) {
-  return <div className="container">{children}</div>;
+export function Container({ children, sm = false }: ContainerInterface) {
+  return <div className={`container ${sm ? "sm" : ""}`}>{children}</div>;
 }

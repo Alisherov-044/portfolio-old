@@ -1,0 +1,32 @@
+.skill__card {
+  position: relative;
+
+  &:hover {
+    svg {
+      transform: scale(1.1);
+    }
+  }
+
+  svg {
+    width: auto;
+    max-height: 30px;
+    margin-bottom: 24px;
+    transition: all .2s ease;
+    color: $color-blue--regular;
+
+    path {
+      fill: $color-blue--regular;
+    }
+  }
+
+  &--title {
+    @include font(24px, 120%, 700);
+    color: $color-white--regular;
+    margin-bottom: 16px;
+  }
+
+  &--description {
+    @include font(16px, 150%, 500);
+    color: $color-grey--regular;
+  }
+}

@@ -1,4 +1,5 @@
 import { doIf } from "./doIf";
-import { colors } from "./colors";
+import { getPixel } from "./calculatePixel";
+import { calculatePercent } from "./calculatePixel";
 
-export { doIf, colors };
+export { doIf, getPixel, calculatePercent };

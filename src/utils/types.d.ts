@@ -1,6 +1,12 @@
 import { Url } from "url";
-import { ReactElement, ReactNode } from "react";
-import { CardScheme } from "./types.scheme";
+import { ComponentProps, ReactElement, ReactNode } from "react";
+import {
+  NavbarLinkScheme,
+  ProjectScheme,
+  SkillSetScheme,
+  SocialNetworkScheme,
+  SpecificationScheme,
+} from "./types.scheme";
 
 /* Events */
 
@@ -19,20 +25,18 @@ interface LayoutInterface {
 /* Layouts -> Header */
 
 interface NavbarLinkInterface {
-  id?: number;
-  text: string;
-  link: Url;
+  navbarLink: NavbarLinkScheme;
 }
 
 /* Layouts -> Footer */
 
 interface SocialNetworkInterface {
-  id?: number;
-  link: Url;
-  icon: string;
+  socialNetwork: SocialNetworkScheme;
 }
 
-interface FooterLinkInterface extends NavbarLinkInterface {}
+interface FooterLinkInterface {
+  footerLink: NavbarLinkScheme;
+}
 
 /* Layouts -> Section */
 
@@ -41,6 +45,7 @@ interface SectionInterface {
   className?: string;
   id?: string;
   full?: boolean;
+  sm?: boolean;
 }
 
 /* Components -> Statements */
@@ -71,6 +76,7 @@ interface PickInterface {
 
 interface ContainerInterface {
   children: ReactNode;
+  sm?: boolean;
 }
 
 interface SectionHeaderInterface {
@@ -84,14 +90,51 @@ interface ButtonInterface {
   text?: string;
   children?: ReactNode;
   className?: string;
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "primary-outline" | "secondary";
 }
 
 /* Components -> Card */
 
 interface SpecificationInterface {
-  id?: number;
-  index: number;
-  title: string;
-  description: string;
+  specification: SpecificationScheme;
+}
+
+interface BrandInterface {
+  icon: ReactNode;
+  animationPixel: number;
+}
+
+interface SkillSetInterface {
+  skill: SkillSetScheme;
+}
+
+interface ProjectInterface {
+  project: ProjectScheme;
+}
+
+/* Components -> Form */
+
+interface InputInterface extends Omit<ComponentProps<"input">, "id"> {
+  id: string;
+  register?: any;
+}
+
+interface FormInterface
+  extends Omit<ComponentProps<"form">, "onSubmit" | "children"> {
+  onSubmit: () => void;
+  children: ReactNode;
+  className?: string;
+}
+
+interface FormGroupInterface extends Omit<InputInterface, "label"> {
+  label: string;
+  textarea?: boolean;
+}
+
+interface TextAreaInterface {
+  id: string;
+  register?: any;
+  rows?: number;
+  cols?: number;
+  className?: string;
 }

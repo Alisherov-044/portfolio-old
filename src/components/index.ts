@@ -1,12 +1,3 @@
-/* Statements */
-
-import { If } from "./statements/If";
-import { Or } from "./statements/Or";
-import { For } from "./statements/For";
-import { Pick } from "./statements/Pick";
-
-export { If, Or, For, Pick };
-
 /* UI */
 
 import { Container } from "./ui/Container";
@@ -19,6 +10,18 @@ export { Container, Logo, SectionHeader, Button, ProgressBar };
 
 /* Card */
 
+import { Brand } from "./card/Brand";
+import { Skill } from "./card/Skill";
+import { Project } from "./card/Project";
 import { Specification } from "./card/Specification";
 
-export { Specification };
+export { Brand, Skill, Project, Specification };
+
+/* Form */
+
+import { Input } from "./form/Input";
+import { Form } from "./form/Form";
+import { FormGroup } from "./form/FormGroup";
+import { TextArea } from "./form/TextArea";
+
+export { Input, Form, FormGroup, TextArea };

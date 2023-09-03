@@ -1,4 +1,4 @@
-import { Container, If, Or, Pick, SectionHeader } from "@/components";
+import { Container, SectionHeader } from "@/components";
 import { SectionHeaderInterface, SectionInterface } from "@/utils/types";
 
 export function Section({
@@ -10,6 +10,7 @@ export function Section({
   description,
   button,
   full,
+  sm,
 }: SectionInterface & SectionHeaderInterface) {
   const Header = (
     <SectionHeader
@@ -22,18 +23,17 @@ export function Section({
 
   return (
     <section id={id} className={className}>
-      <Pick state={!!full}>
-        <If condition>
+      {full ? (
+        <>
           {Header}
           {children}
-        </If>
-        <Or>
-          <Container>
-            {Header}
-            {children}
-          </Container>
-        </Or>
-      </Pick>
+        </>
+      ) : (
+        <Container sm={sm}>
+          {Header}
+          {children}
+        </Container>
+      )}
     </section>
   );
 }

@@ -1,5 +1,13 @@
 import { Layout } from "@/layouts";
-import { About, Hero, Specifications } from "./home";
+import {
+  About,
+  Brands,
+  Contact,
+  Hero,
+  Projects,
+  Skills,
+  Specifications,
+} from "./home";
 
 export default function Home() {
   return (
@@ -7,6 +15,10 @@ export default function Home() {
       <Hero />
       <Specifications />
       <About />
+      <Skills />
+      <Brands />
+      <Projects />
+      <Contact />
     </Layout>
   );
 }

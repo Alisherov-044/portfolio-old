@@ -1,5 +1,4 @@
 import { SectionHeaderInterface } from "@/utils/types";
-import { If } from "..";
 
 export function SectionHeader({
   slug,
@@ -10,15 +9,13 @@ export function SectionHeader({
   return (
     <div className="section__header">
       <div className="text__wrapper">
-        <If condition={!!slug}>
-          <h5 className="section__header--slug">{slug}</h5>
-        </If>
+        {slug ? <h5 className="section__header--slug">{slug}</h5> : null}
         <h1 className="section__header--title">{title}</h1>
-        <If condition={!!description}>
+        {description ? (
           <p className="section__header--description">{description}</p>
-        </If>
+        ) : null}
       </div>
-      <If condition={!!button}>{button}</If>
+      {button ? button : null}
     </div>
   );
 }

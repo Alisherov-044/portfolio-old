@@ -1,0 +1,22 @@
+.input,
+.textarea {
+  @include font(14px, 120%, 500);
+  width: 100%;
+  padding: 8px 12px;
+  color: $color-white--regular;
+  background-color: $color-black--light;
+}
+
+.textarea {
+  resize: none;
+  max-height: 100px;
+}
+
+.form__group {
+  @include d-flex(column, unset, unset, 5px);
+}
+
+.form__label {
+  @include font(16px, 150%, 500);
+  color: $color-white--regular;
+}
