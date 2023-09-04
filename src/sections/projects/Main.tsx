@@ -9,7 +9,7 @@ export function Main() {
     <Section slug="projects" title="All Projects">
       <div className="all-projects__wrapper">
         {projects.map((project) => (
-          <Project project={project} />
+          <Project project={project} key={project.id} />
         ))}
       </div>
     </Section>
