@@ -15,7 +15,7 @@ export function Contact() {
         <FormGroup id="email" label="Email address" />
         <FormGroup id="description" label="Description" textarea />
         <Button variant="primary" className="contact__form--button">
-          Let's get started
+          {`Let's get started`}
         </Button>
       </Form>
     </Section>

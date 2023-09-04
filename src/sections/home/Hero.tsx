@@ -24,7 +24,7 @@ export function Hero() {
           transition={FadeIn().transition()}
           className="title"
         >
-          I'm Sadulla Alisherov. A Web developer{" "}
+          {`I'm Sadulla Alisherov. A Web developer`}{" "}
           <span className="dark">based in Uzbekistan.</span>
         </motion.h1>
         <motion.p
@@ -34,9 +34,9 @@ export function Hero() {
           transition={FadeIn().transition(1.7)}
           className="description"
         >
-          I'm the small developer with big desire and dream. My wish in the
+          {`I'm the small developer with big desire and dream. My wish in the
           future is to create my own framework that everyone can use it to
-          creaet better user interfaces
+          creaet better user interfaces`}
         </motion.p>
       </div>
     </Section>

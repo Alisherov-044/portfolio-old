@@ -7,7 +7,7 @@ import {
   Projects,
   Skills,
   Specifications,
-} from "./home";
+} from "@/sections/home";
 
 export default function Home() {
   return (

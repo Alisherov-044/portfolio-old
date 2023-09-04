@@ -1,0 +1,36 @@
+@import './social';
+@import './specifications';
+@import './skillset';
+@import './projects';
+
+.actions {
+  @include d-flex(row, center, space-between);
+  width: 70px;
+  height: 40px;
+
+  .icon {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+
+    &.edit {
+      path {
+        fill: $color-yellow;
+      }
+    }
+
+    &.delete {
+      path {
+        fill: $color-red;
+      }
+    }
+  }
+}
+
+.admin-form {
+  @include d-flex(column, unset, unset, 30px);
+}
+
+.admin-form--button {
+  margin-top: 20px;
+}

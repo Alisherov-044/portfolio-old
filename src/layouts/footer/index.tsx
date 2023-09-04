@@ -1,8 +1,11 @@
 import { Logo } from "@/components";
-import { navbarLinks, socialNetworks } from "@/data";
+import { navbarLinks } from "@/data";
 import { FooterLink, SocialNetwork } from "./components";
+import { useSocialNetworksContext } from "@/context";
 
 export function Footer() {
+  const { socialNetworks } = useSocialNetworksContext();
+
   return (
     <footer className="footer">
       <div className="container">

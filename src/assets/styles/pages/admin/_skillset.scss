@@ -1,0 +1,11 @@
+.skillset--admin {
+  color: $color-white--regular;
+
+  svg {
+    max-height: 30px;
+
+    path {
+      fill: $color-blue--regular;
+    }
+  }
+}

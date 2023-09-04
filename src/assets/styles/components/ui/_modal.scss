@@ -1,0 +1,25 @@
+.modal__wrapper {
+  @include d-flex(row, center, center);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($color: $color-black--regular, $alpha: .5);
+  transition: all .3s ease;
+  opacity: 0;
+  z-index: -40;
+  pointer-events: none;
+
+  &.open {
+    opacity: 1;
+    z-index: 40;
+    pointer-events: auto;
+  }
+
+  .modal__container {
+    @include d-flex(column, unset, unset, 10px);
+    max-width: 1200px;
+    padding: 20px;
+  }
+}

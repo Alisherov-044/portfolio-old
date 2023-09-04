@@ -5,8 +5,20 @@ import { Logo } from "./ui/Logo";
 import { SectionHeader } from "./ui/SectionHeader";
 import { Button } from "./ui/Button";
 import { ProgressBar } from "./ui/ProgressBar";
+import { Modal } from "./ui/Modal";
+import { Confirm } from "./ui/Confirm";
+import { Message } from "./ui/Message";
 
-export { Container, Logo, SectionHeader, Button, ProgressBar };
+export {
+  Container,
+  Logo,
+  SectionHeader,
+  Button,
+  ProgressBar,
+  Modal,
+  Confirm,
+  Message,
+};
 
 /* Card */
 

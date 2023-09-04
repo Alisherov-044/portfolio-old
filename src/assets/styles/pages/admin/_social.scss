@@ -1,0 +1,8 @@
+.social__network--admin {
+  @include d-flex(row, center, unset, 30px);
+  color: $color-white--regular;
+}
+
+.content__wrapper {
+  padding-block: 40px;
+}

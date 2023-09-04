@@ -1,0 +1,11 @@
+.confirm__modal--content {
+  @include d-flex(column, unset, unset, 40px);
+  position: relative;
+  background-color: $color-black--light;
+  color: $color-white--regular;
+  padding: 20px;
+}
+
+.confirm__modal--actions {
+  @include d-flex(row, center, unset, 40px);
+}

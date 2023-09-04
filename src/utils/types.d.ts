@@ -86,11 +86,29 @@ interface SectionHeaderInterface {
   button?: ReactNode;
 }
 
-interface ButtonInterface {
+interface ButtonInterface extends ComponentProps<"button"> {
   text?: string;
   children?: ReactNode;
   className?: string;
   variant?: "primary" | "primary-outline" | "secondary";
+}
+
+interface ModalInterface {
+  children: ReactNode;
+  open: boolean;
+  onClose: () => void;
+  className?: string;
+}
+
+interface ConfirmInterface extends Omit<ModalInterface, "children"> {
+  title: string;
+  onConfirm: () => void;
+}
+
+interface MessageInterface {
+  message?: string;
+  variant: "success" | "warning" | "error";
+  isActive: boolean;
 }
 
 /* Components -> Card */
@@ -100,7 +118,7 @@ interface SpecificationInterface {
 }
 
 interface BrandInterface {
-  icon: ReactNode;
+  icon: string;
   animationPixel: number;
 }
 
@@ -138,3 +156,33 @@ interface TextAreaInterface {
   cols?: number;
   className?: string;
 }
+
+/* Context */
+
+interface ProviderInterface {
+  children: ReactNode;
+}
+
+interface ProjectsContextInterface {
+  projects: ProjectScheme[] | [];
+}
+
+interface ProjectsProviderInterface extends ProviderInterface {}
+
+interface SpecificationsContextInterface {
+  specifications: SpecificationScheme[] | [];
+}
+
+interface SpecificationsProviderInterface extends ProviderInterface {}
+
+interface SkillsetContextInterface {
+  skills: SkillSetScheme[] | [];
+}
+
+interface SkillsetProviderInterface extends ProviderInterface {}
+
+interface SocialNetworksContextInterface {
+  socialNetworks: SocialNetworkScheme[] | [];
+}
+
+interface SocialNetworksProviderInterface extends ProviderInterface {}

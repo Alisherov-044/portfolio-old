@@ -1,0 +1,36 @@
+.message {
+  @include d-flex(row, center, unset, 20px);
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50);
+  width: 400px;
+  height: 60px;
+  padding: 10px;
+  transition: all .3s ease;
+  opacity: 0;
+  z-index: -50;
+  top: -100%;
+
+  &.active {
+    opacity: 1;
+    top: 10px;
+    z-index: 50;
+  }
+
+  &.success {
+    background-color: $color-green--regular;
+  }
+
+  &.error {
+    background-color: $color-red;
+  }
+
+  &.warning {
+    background-color: $color-yellow;
+  }
+
+  &__icon {
+    max-width: 22px;
+    max-height: 22px;
+  }
+}

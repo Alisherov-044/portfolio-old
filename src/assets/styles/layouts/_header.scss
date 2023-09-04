@@ -12,10 +12,11 @@
     .navbar {
         @include d-flex(row, center, space-between);
         @extend .container;
-        height: 100%;
+        height: $header-height;
 
         @include media(1000) {
             background-color: $color-black--regular;
+            height: $header-height--mobile;
         }
 
         &__links {

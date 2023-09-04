@@ -1,8 +1,10 @@
 import { Section } from "@/layouts";
-import { specifications } from "@/data";
 import { Specification } from "@/components";
+import { useSpecificationsContext } from "@/context";
 
 export function Specifications() {
+  const { specifications } = useSpecificationsContext();
+
   return (
     <Section
       id="specification"

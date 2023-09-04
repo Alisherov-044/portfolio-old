@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "text": "Dashboard",
+    "link": "/admin"
+  },
+  {
+      "id": 2,
+      "text": "Specification",
+      "link": "/admin/specification"
+  },
+  {
+      "id": 3,
+      "text": "Skillset",
+      "link": "/admin/skillset"
+  },
+  {
+    "id": 4,
+    "text": "Social Networks",
+    "link": "/admin/social"
+  },
+  {
+      "id": 5,
+      "text": "projects",
+      "link": "/admin/projects"
+  }
+]

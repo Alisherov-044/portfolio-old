@@ -1,3 +1,4 @@
+import parse from "html-react-parser";
 import Link from "next/link";
 import { SkillSetInterface } from "@/utils/types";
 
@@ -6,7 +7,7 @@ export function Skill({ skill }: SkillSetInterface) {
 
   const content = (
     <>
-      <div className="skill__card--icon">{icon}</div>
+      <div className="skill__card--icon">{parse(icon)}</div>
       <h2 className="skill__card--title">{title}</h2>
       <p className="skill__card--description">{description}</p>
     </>

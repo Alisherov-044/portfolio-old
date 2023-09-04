@@ -9,6 +9,9 @@
 @import './components/ui/sectionHeader';
 @import './components/ui/button';
 @import './components/ui/progressBar';
+@import './components/ui/modal';
+@import './components/ui/message';
+@import './components/ui/confirm';
 
 /* components -> card */
 @import './components/card/specification';
@@ -25,3 +28,4 @@
 
 /* pages */
 @import './pages/home/home';
+@import './pages/admin/admin';

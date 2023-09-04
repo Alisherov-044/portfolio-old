@@ -1,3 +1,4 @@
+import parse from "html-react-parser";
 import { motion } from "framer-motion";
 import { BrandInterface } from "@/utils/types";
 
@@ -8,7 +9,7 @@ export function Brand({ icon, animationPixel }: BrandInterface) {
       animate={{ x: `-${animationPixel}px` }}
       transition={{ type: "tween", duration: 0.1 }}
     >
-      {icon}
+      {parse(icon)}
     </motion.div>
   );
 }

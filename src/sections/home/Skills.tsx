@@ -1,8 +1,10 @@
 import { Skill } from "@/components";
-import { skills } from "@/data";
+import { useSkillsetContext } from "@/context";
 import { Section } from "@/layouts";
 
 export function Skills() {
+  const { skills } = useSkillsetContext();
+
   return (
     <Section
       id="skillset"

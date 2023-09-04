@@ -27,7 +27,7 @@ model SkillSet {
 
 model SocialNetwork {
   id   Int    @id @default(autoincrement())
-  text String
+  icon String
   link String
 }
 

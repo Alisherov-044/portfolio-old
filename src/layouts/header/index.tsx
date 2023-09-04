@@ -1,19 +1,22 @@
+import { doIf } from "@/utils";
 import { Logo } from "@/components";
 import { NavbarLink } from "./components";
-import { navbarLinks } from "@/data";
-import { doIf } from "@/utils";
+import { adminNavbarLinks, navbarLinks } from "@/data";
 import { BurgerIcon } from "@/assets/icons";
-import { useNavbar } from "@/hooks";
+import { useAdminRouter, useNavbar } from "@/hooks";
 
 export function Header() {
   const { isOpen, close, toggle } = useNavbar();
+  const { isAdmin } = useAdminRouter();
+
+  const links = isAdmin ? adminNavbarLinks : navbarLinks;
 
   return (
     <header className="header">
       <nav className="navbar">
         <Logo />
         <ul className={`navbar__links ${doIf(isOpen, "open", "close")}`}>
-          {navbarLinks.map((navbarLink) => (
+          {links.map((navbarLink) => (
             <NavbarLink
               navbarLink={navbarLink}
               key={navbarLink.id}
