@@ -7,7 +7,7 @@ export function Project({ project }: ProjectInterface) {
   const { image, title, description, link } = project;
 
   return (
-    <Link href={link} className="project__card">
+    <Link href={link} target="_blank" className="project__card">
       <div className="project__card--image">
         <Image src={image} width={870} height={400} alt="project imaage" />
       </div>

@@ -157,6 +157,12 @@ interface TextAreaInterface {
   className?: string;
 }
 
+interface ContactFormInterface {
+  name: string;
+  email: string;
+  description: string;
+}
+
 /* Context */
 
 interface ProviderInterface {

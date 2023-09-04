@@ -1,0 +1,11 @@
+.all-projects__wrapper {
+  @include d-flex(row, center, unset, 48px);
+
+  @include media(1152) {
+    flex-direction: column;
+  
+    .project__card {
+      max-width: 100%;
+    }
+  }
+}

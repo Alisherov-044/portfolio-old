@@ -1,8 +1,8 @@
 .message {
-  @include d-flex(row, center, unset, 20px);
+  @include d-flex(row, center, center, 20px);
   position: fixed;
   left: 50%;
-  transform: translateX(-50);
+  transform: translateX(-50%);
   width: 400px;
   height: 60px;
   padding: 10px;

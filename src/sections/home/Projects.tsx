@@ -1,5 +1,6 @@
+import Link from "next/link";
 import { Section } from "@/layouts";
-import { Button, Project } from "@/components";
+import { Project } from "@/components";
 import { useProjectsContext } from "@/context";
 
 export function Projects() {
@@ -10,15 +11,18 @@ export function Projects() {
       id="projects"
       className="projects__section"
       slug="My Projects"
-      title="Work that I've done for the past years"
+      title="Projects that I've done in the past"
     >
       {projects.map((project) => (
         <Project project={project} key={project.id} />
       ))}
       <div className="projects__section--button__wrapper">
-        <Button variant="primary-outline" className="projects__section--button">
+        <Link
+          href="/projects"
+          className="button primary-outline projects__section--button"
+        >
           View All Projects
-        </Button>
+        </Link>
       </div>
     </Section>
   );

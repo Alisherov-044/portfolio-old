@@ -10,7 +10,7 @@ export function Skills() {
       id="skillset"
       className="skills__section"
       title="Skillset"
-      description="With skills in over 4 different fields of design, I am the perfect person to hire when it comes to a full fledged project. Whatever your needs are, I can pretty much take on any challenge."
+      description="There are i mentioned my top for skills that i can proud of. Of course they are not all what i know but the most important ones."
     >
       <ul className="skills__card--wrapper">
         {skills.map((skill) => (

@@ -6,9 +6,14 @@ export function About() {
     <Section
       className="about__section"
       title="Philosophy & values"
-      description="I think everyone wants the same thing - relationship with humanity, peace with the metaphysical, and experience with the universe. I try to grasp these things with my values: authenticity, creativity, & hospitality."
+      description="I'm Sadulla Alisherov web developer graduated Data Learning Center. I have knowledge in both Frontend and Backend as well as Creating APIs and using it in Frontend"
       button={
-        <Link href="#" className="section__header--button button secondary">
+        <Link
+          href="/resume.pdf"
+          target="_blank"
+          className="section__header--button button secondary"
+          download="/resume.pdf"
+        >
           More about me
         </Link>
       }
