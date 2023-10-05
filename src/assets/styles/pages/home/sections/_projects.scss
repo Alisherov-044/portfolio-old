@@ -4,7 +4,7 @@
 
   .container {
     @include d-flex(column, unset, unset, 24px, wrap);
-    max-height: 900px;
+    max-height: 1240px;
 
     @include media(990) {
       max-height: unset;
