@@ -192,3 +192,9 @@ interface SocialNetworksContextInterface {
 }
 
 interface SocialNetworksProviderInterface extends ProviderInterface {}
+
+interface ContactMessageInterface {
+  name: string;
+  email: string;
+  description: string;
+}

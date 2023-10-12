@@ -1,14 +1,24 @@
 import { Section } from "@/layouts";
 import { Button, Form, FormGroup, Message } from "@/components";
 import { SubmitHandler, useForm } from "react-hook-form";
+import { ContactMessageInterface } from "@/utils/types";
 import { useMessage } from "@/hooks";
 
 export function Contact() {
-  const { handleSubmit, register, reset } = useForm();
+  const { handleSubmit, register, reset } = useForm<ContactMessageInterface>();
   const { isActive, message, setMessage, variant } = useMessage();
 
-  const onSubmit: SubmitHandler<any> = (event) => {
+  const onSubmit: SubmitHandler<ContactMessageInterface> = (event) => {
     if (event) {
+      let message = `name: ${event.name} 
+      email: ${event.email} 
+      description: ${event.description}`;
+
+      let token = "5626317023:AAGnKSVpx69mi7u1FI23XokKvq6i22OWXUY";
+      let chat_id = 5193911535;
+      let url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${message}`;
+
+      fetch(url);
       setMessage({ variant: "success", message: "Message sent" });
     }
     reset();
