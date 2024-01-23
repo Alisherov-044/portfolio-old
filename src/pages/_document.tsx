@@ -5,6 +5,7 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <title>Alisherov Sadulla</title>
+        <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
       </Head>
       <body>
         <Main />

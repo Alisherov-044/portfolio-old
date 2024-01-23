@@ -13,7 +13,7 @@ export function Projects() {
       slug="My Projects"
       title="Projects that I've done in the past"
     >
-      {projects.map((project) => (
+      {projects.slice(0, 4).map((project) => (
         <Project project={project} key={project.id} />
       ))}
       <div className="projects__section--button__wrapper">
